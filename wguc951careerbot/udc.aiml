@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    
+    <category>
+        <pattern>YES</pattern>
+        <template><delay>1</delay>
+            Excellent, let's get started! Which do you like to work with more: 
+            <button type="button">Hardware</button>
+            <button type="button">Software</button>    
+        </template>
+    </category>
+    
+    <category>
+        <pattern>NO</pattern>
+        <template><delay>1</delay>
+            Okay. Let me know whenever you are ready by saying 'hi' again and 
+            I'll be more than happy to help! 
+        </template>
+    </category>
+    
+    <!-- Hardware specific responses -->
+    <category>
+        <pattern>HARDWARE</pattern>
+        <template><delay>1</delay>
+            Good choice! Would you say you like to be more hands-on with your work?
+            <button type="button">
+                <text>Yes</text>
+                <postback>HANDSONYES</postback>
+            </button>
+            <button type="button">
+                <text>No</text>
+                <postback>HANDSONNO</postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>HANDSONYES</pattern>
+        <template><delay>1</delay>
+            Great! Would you say that you like to work with all kinds of devices, not just computers? 
+            <button type="button">
+                <text>Yes</text>
+                <postback>OTHERDEVICESYES</postback>
+            </button>
+            <button type="button">
+                <text>No</text>
+                <postback>HANDSONNO</postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>HANDSONNO</pattern>
+        <template><delay>1</delay>
+            Interesting. Would you say that you like to solve networking issues?
+            <button type="button">
+                <text>Yes</text>
+                <postback>NETWORKISSUESYES</postback>
+            </button>
+            <button type="button">
+                <text>No</text>
+                <postback>NETWORKISSUESNO</postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>OTHERDEVICESYES</pattern>
+        <template><delay>1</delay>
+            Excellent! Based on your provided responses, I believe a great career choice for you
+            would be an IT Support Engineer! As an IT support engineer, you'll get to install and
+            configure client computer systems. On top of that, you'll get to repair hardware 
+            malfunctions, fix software issues, and troubleshoot company network problems. According
+            to the website Comparably, the median pay in the US for an IT Support Engineer in 2023 is 
+            $79,140/year. Press the below button to jump to Comparably's official website or type
+            "new choice" to find a different career.
+            <button>
+                <text>IT Support Engineer</text>
+                <url>https://www.comparably.com/salaries/salaries-for-it-support-engineer</url>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>NETWORKISSUESYES</pattern>
+        <template><delay>1</delay>
+            Perfect! Based on your provided responses, I believe a great career choice for you
+            would be a Network Administrator! Network Admins configure, monitor, and troubleshoot
+            company networks, implementing security measures and evaluating network performance. 
+            According to the US Bureau of Labor Statistics, the medain pay in the US for a Network 
+            Admin in 2022 was $90,520/year. Press the below button to jump to the Bureau of Labor
+            Statistics official website or type "new choice" to find a different career.
+            <button>
+                <text>Network Admin</text>
+                <url>https://www.bls.gov/ooh/computer-and-information-technology/network-and-computer-systems-administrators.htm</url>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>NETWORKISSUESNO</pattern>
+        <template><delay>1</delay>
+            No problem. Based on your provided responses, I believe a great career choice for you
+            would be a Solutions Architect! As a solutions architect, you'll continually stay up-to-date
+            with current and emerging technologies and provide technical solutions to clients and 
+            stakeholders to address technical problems. You'll get to design, modify, and test systems
+            to solve specific business problems. According to the website Comparably, the median pay in
+            the US for a Solutions Architect in 2023 is $114,342/year. Press the below button to jump to 
+            Comparably's official website or type "new choice" to find a different career.
+            <button type="button">
+                <text>Solutions Architect</text>
+                <url>https://www.comparably.com/salaries/salaries-for-solutions-architect</url>
+            </button>
+        </template>
+    </category>
+    
+    
+    <!-- Software specific responses -->
+    <category>
+        <pattern>SOFTWARE</pattern>
+        <template><delay>1</delay>
+            Good choice! Would you say you are creative?
+            <button type="button">
+                <text>Yes</text>
+                <postback>CREATIVEYES</postback>
+            </button>
+            <button type="button">
+                <text>No</text>
+                <postback>CREATIVENO</postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>CREATIVEYES</pattern>
+        <template><delay>1</delay>
+            Great! Would you say that you like to design user interfaces?
+            <button type="button">
+                <text>Yes</text>
+                <postback>DESIGNUIYES</postback>
+            </button>
+            <button type="button">
+                <text>No</text>
+                <postback>CREATIVENO</postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>CREATIVENO</pattern>
+        <template><delay>1</delay>
+            That's alright. Would you say that you are good at solving problems?
+            <button type="button">
+                <text>Yes</text>
+                <postback>PROBLEMSOLVEYES</postback>
+            </button>
+            <button type="button">
+                <text>No</text>
+                <postback>PROBLEMSOLVENO</postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>PROBLEMSOLVEYES</pattern>
+        <template><delay>1</delay>
+            Great! Would you say that you like to code more with a programming 
+            language of your choice? 
+            <button type="button">
+                <text>Yes</text>
+                <postback>CODEYES</postback>
+            </button>
+            <button type="button">
+                <text>No</text>
+                <postback>HANDSONNO</postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>PROBLEMSOLVENO</pattern>
+        <template><delay>1</delay>
+            No problem. Would you say that you are a people person?
+            <button type="button">
+                <text>Yes</text>
+                <postback>OTHERDEVICESYES</postback>
+            </button>
+            <button type="button">
+                <text>No</text>
+                <postback>HANDSONNO</postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>CODEYES</pattern>
+        <template><delay>1</delay>
+            Me too! Now, would you say you like working with lots of data from databases?
+            <button type="button">
+                <text>Yes</text>
+                <postback>DATAYES</postback>
+            </button>
+            <button type="button">
+                <text>No</text>
+                <postback>DATANO</postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>DATAYES</pattern>
+        <template><delay>1</delay>
+            Perfect! Based on your provided responses, I believe a great career choice for you
+            would be a Data Administrator. As a Database Admin, you will get to work with 
+            databases and the data that is stored in them by configuring them to ensure they
+            perform properly to company standards and by ensuring its security so unauthorized
+            invidiuals can not access confidential data. According to the US Bureau of Labor
+            Statistics, the median pay in the US for a Database Admin in 2022 was $112,120/year.
+            Press the below button to jump to the Bureau of Labor Statistic's official website or
+            type "new choice" to find a different career.
+            <button type="button">
+                <text>Database Administrator</text>
+                <url>https://www.bls.gov/ooh/computer-and-information-technology/database-administrators.htm</url>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>DATANO</pattern>
+        <template><delay>1</delay>
+            Interesting. Based on your provided responses, I believe a great career choice for you
+            would be a Software Development Engineer. As a Software Developer, you will work with others
+            to design and develop new software solutions using clean, efficient code based on a set of 
+            specifications. Also, you'll test, debug, and maintain existing software. According to the US 
+            Bureau of Labor Statistics, the median pay in the US for a Software Development Engineer in 
+            2022 was $124,200/year. Press the below button to jump to the Bureau of Labor Statistic's official 
+            website or type "new choice" to find a different career.
+            <button type="button">
+                <text>Software Development Engineer</text>
+                <url>https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm</url>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>DESIGNUIYES</pattern>
+        <template><delay>1</delay>
+            Excellent! Based on your provided responses, I believe a great career choice for you
+            would be a Web Development Engineer. As a web development engineer, you will get to 
+            design, build, and test web applications, as well as maintain and troubleshoot any 
+            issues found within the application. According to the US Bureau of Labor Statistics, the
+            median pay in the US for a Web Development Engineer in 2022 was $80,730/year. Press the
+            below button to jump to the Bureau of Labor Statistics offical website or type "new choice"
+            to find a different career.
+            <button type="button">
+                <text>Web Development Engineer</text>
+                <url>https://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm</url>
+            </button>
+        </template>
+    </category>
+    
+  <!-- Option to start over if the user wants to go again -->
+    <category>
+        <pattern>NEW CHOICE</pattern>
+        <template><delay>1</delay>
+            I'm glad to see that you are interested in other choices! Let start over 
+            from the beginning. Which do you like to work with more: 
+            <button type="button">Hardware</button>
+            <button type="button">Software</button>    
+        </template>
+    </category>
+    
+  <category>
+    <pattern>*</pattern>
+    <template><delay>1</delay>
+        I have no answer for that.
+    </template>
+  </category>
+</aiml>

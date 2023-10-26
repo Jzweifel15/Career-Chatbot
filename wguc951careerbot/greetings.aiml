@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- Different greetings that a user may start with -->
+	<category>
+	    <pattern>HELLO</pattern>
+	    <template><delay>2</delay>
+	        Hello and welcome! I am your career assitance bot, and I will help find the right career for you. 
+	        For me to help find the right career, I will need to ask you a series of questions. Ready to
+            get started?
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>HELLO THERE</pattern>
+	    <template><delay>2</delay>
+	        Hello there, and welcome! I am your career assitance bot, and I will help find the right career for you. 
+	        For me to help find the right career, I will need to ask you a series of questions. Ready to
+            get started?
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>HOWDY</pattern>
+	    <template><delay>2</delay>
+	        Howdy and welcome! I am your career assitance bot, and I will help find the right career for you. 
+	        For me to help find the right career, I will need to ask you a series of questions. Ready to
+            get started?
+	    </template>
+	</category>
+	
+	<category>
+	    <pattern>HI</pattern>
+	    <template><delay>2</delay>
+	        Hi and welcome! I am your career assitance bot, and I will help find the right career for you. 
+	        For me to help find the right career, I will need to ask you a series of questions. Ready to
+            get started?
+	    </template>
+	</category>
+</aiml>
